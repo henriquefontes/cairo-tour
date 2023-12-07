@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-primary: #222222;
+  --bg-color-secondary: #2b2b2b;
+  --text-color-primary: white;
+  --text-color-secondary: #ccc;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  scroll-behavior: smooth;
+}
+
+#top-header {
+  background-color: var(--bg-color-secondary);
+  -webkit-box-shadow: 0px 15px 70px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 15px 70px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 15px 70px -20px rgba(0, 0, 0, 0.75);
+}
+
+#header-logo {
+  width: 90px;
+}
+
+/* Overrides Bootstrap */
+.nav-link {
+  color: var(--text-color-primary);
+}
+.nav-link:hover {
+  color: var(--text-color-secondary);
+}
+
+.carousel {
+  height: 400px;
+}
+
+.carousel img {
+  object-fit: cover;
+}
+
+.carousel-top-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  margin-right: 0.7rem;
+  font-size: 2rem;
+}
+
+.carousel-inner,
+.carousel-item,
+.carousel-item > img {
+  height: 100%;
+}
+
+.carousel-item > iframe ~ .carousel-item-description-container {
+  pointer-events: none;
+  user-select: none;
+  top: 0;
+}
+
+.carousel .carousel-control-prev {
+  opacity: 1;
+  margin-left: 1rem;
+  border-radius: 0.375rem 0 0 0.375rem;
+  background: rgba(0, 0, 0, 0.7);
+  background: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.27) 61%,
+    rgba(0, 0, 0, 0.24) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(0, 0, 0, 0.7)),
+    color-stop(61%, rgba(0, 0, 0, 0.27)),
+    color-stop(66%, rgba(0, 0, 0, 0.24)),
+    color-stop(100%, rgba(0, 0, 0, 0))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.27) 61%,
+    rgba(0, 0, 0, 0.24) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.27) 61%,
+    rgba(0, 0, 0, 0.24) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.27) 61%,
+    rgba(0, 0, 0, 0.24) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.27) 61%,
+    rgba(0, 0, 0, 0.24) 66%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}
+
+.carousel .carousel-control-next {
+  opacity: 1;
+  margin-right: 1rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+  background: rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(0, 0, 0, 0)),
+    color-stop(61%, rgba(0, 0, 0, 0.43)),
+    color-stop(66%, rgba(0, 0, 0, 0.46)),
+    color-stop(100%, rgba(0, 0, 0, 0.7))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}
+
+.carousel-indicators {
+  transform: translateY(200%) !important;
+  gap: 20px;
+}
+.carousel-indicators > button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+
+.carousel-item-description-container {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: blue;
+  padding: 10px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0)),
+    color-stop(61%, rgba(0, 0, 0, 0.43)),
+    color-stop(66%, rgba(0, 0, 0, 0.46)),
+    color-stop(100%, rgba(0, 0, 0, 0.7))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.43) 61%,
+    rgba(0, 0, 0, 0.46) 66%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+.carousel-item-description {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.col:has(.album-card) {
+  display: flex;
+  justify-content: center;
+}
+
+#carouselPreview {
+  width: 100%;
+  height: 80%;
+}
+
+#carouselPreview img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#carouselPreview iframe {
+  height: 100%;
+}
+
+#carouselPreview .carousel-indicators {
+  gap: 5px;
+}
+/* ------------- */
+
+/* Overrides Mapbox */
+.mapboxgl-popup-content {
+  position: relative;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 18px;
+}
+
+.mapbox-popup-title {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mapbox-popup-description {
+  font-size: 14px;
+  color: #525252;
+}
+
+.mapbox-popup-image {
+  display: block;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.album-card {
+  width: 100%;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  position: relative;
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+
+.rz-n2 {
+  transform: rotateZ(-2deg);
+}
+
+.rz-p2 {
+  transform: rotateZ(2deg);
+}
+
+.album-card.book {
+  transform: none;
+}
+
+.album-marker {
+  width: 13px;
+  top: 0;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.2s;
+}
+
+.album-title {
+  font-family: "Inspiration", cursive;
+  text-align: center;
+  font-size: 2.3rem;
+  transform: translateY(-25%);
+}
+
+.album-description {
+  word-break: break-word;
+  font-size: 1rem;
+  text-align: center;
+  transform: translateY(-25%);
+}
+
+.album-image-container {
+  position: relative;
+}
+
+.album-video-play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  color: #222;
+  -webkit-box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  font-size: 2rem;
+}
+
+.album-card.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+}
+
+.album-card.background.left {
+  z-index: -1;
+  left: 0;
+  transform: translateX(-30%) rotateZ(-30deg) scale(80%);
+}
+
+.album-card.background.right {
+  z-index: -1;
+  right: 0;
+  transform: translateX(30%) rotateZ(30deg) scale(80%);
+}
+
+.album-card:hover {
+  transform: scale(105%);
+  cursor: pointer;
+}
+
+.album-card:hover > .album-marker {
+  transform: translateY(-150%) translateX(-50%);
+}
+
+.album-card.book:hover {
+  transform: scale(105%);
+  cursor: pointer;
+}
+
+.author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 0;
+}
+
+.author-social-media-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+#carouselPreview .carousel-inner {
+  height: 50;
+}
+
+.author-social-media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-social-media a {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.2s;
+}
+
+.author-social-media a:hover {
+  color: var(--text-color-secondary);
+}
+
+.carregamento {
+  position: fixed;
+  backdrop-filter: blur(3px);
+  background-color: #0000009d;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.destacado {
+  color: yellow;
+}
+
+#destacar-album {
+  font-size: 20px;
+}
+
+#destacar-album:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  #albuns .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-card {
+    width: 18rem;
+  }
+
+  .album-image {
+    width: 100% !important;
+    height: 252px !important;
+    object-fit: cover;
+    background-color: gray;
+  }
+
+  #carouselPreview {
+    height: 200px;
+  }
+
+  .carousel {
+    height: 210px;
+  }
+
+  .carousel img {
+    object-fit: cover;
+  }
+
+  .carousel-item-description {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .album-image {
+    width: 100% !important;
+    height: 155px !important;
+    object-fit: cover;
+  }
+
+  .carousel {
+    height: 240px;
+  }
+
+  #carouselPreview {
+    height: 340px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .album-image {
+    width: 100% !important;
+    height: 170px !important;
+    object-fit: cover;
+  }
+
+  .album-title {
+    font-size: 2.1rem;
+  }
+
+  .carousel {
+    height: 320px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .album-image {
+    width: 100% !important;
+    height: 170px !important;
+    object-fit: cover;
+  }
+  .album-card {
+    max-height: 306px;
+  }
+}
